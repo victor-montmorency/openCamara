@@ -6,30 +6,35 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		9B91C8062D10F7750029E789 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B91C7F92D10F7750029E789 /* AppDelegate.swift */; };
+		9B91C8072D10F7750029E789 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B91C7FD2D10F7750029E789 /* SceneDelegate.swift */; };
+		9B91C8082D10F7750029E789 /* favoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B91C7FF2D10F7750029E789 /* favoritesViewController.swift */; };
+		9B91C8092D10F7750029E789 /* homeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B91C8002D10F7750029E789 /* homeViewController.swift */; };
+		9B91C80A2D10F7750029E789 /* searchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B91C8012D10F7750029E789 /* searchViewController.swift */; };
+		9B91C80B2D10F7750029E789 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B91C8022D10F7750029E789 /* TabBarViewController.swift */; };
+		9B91C80C2D10F7750029E789 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B91C7FA2D10F7750029E789 /* Assets.xcassets */; };
+		9B91C80D2D10F7750029E789 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B91C7FC2D10F7750029E789 /* LaunchScreen.storyboard */; };
+		9B91C8102D10FAD30029E789 /* model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B91C80F2D10FAD30029E789 /* model.swift */; };
+		9B91C8122D10FBC30029E789 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B91C8112D10FBC30029E789 /* NetworkManager.swift */; };
+		9B91C8142D10FDB20029E789 /* ForecastCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B91C8132D10FDB20029E789 /* ForecastCollectionViewCell.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		9B91C7D42D10CFA10029E789 /* openData Camara federal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "openData Camara federal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B91C7F92D10F7750029E789 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9B91C7FA2D10F7750029E789 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9B91C7FB2D10F7750029E789 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9B91C7FD2D10F7750029E789 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		9B91C7FF2D10F7750029E789 /* favoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = favoritesViewController.swift; sourceTree = "<group>"; };
+		9B91C8002D10F7750029E789 /* homeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeViewController.swift; sourceTree = "<group>"; };
+		9B91C8012D10F7750029E789 /* searchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchViewController.swift; sourceTree = "<group>"; };
+		9B91C8022D10F7750029E789 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		9B91C8042D10F7750029E789 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B91C80F2D10FAD30029E789 /* model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = model.swift; sourceTree = "<group>"; };
+		9B91C8112D10FBC30029E789 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		9B91C8132D10FDB20029E789 /* ForecastCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		9B91C7E62D10CFA30029E789 /* Exceptions for "openData Camara federal" folder in "openData Camara federal" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = 9B91C7D32D10CFA10029E789 /* openData Camara federal */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		9B91C7D62D10CFA10029E789 /* openData Camara federal */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				9B91C7E62D10CFA30029E789 /* Exceptions for "openData Camara federal" folder in "openData Camara federal" target */,
-			);
-			path = "openData Camara federal";
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		9B91C7D12D10CFA10029E789 /* Frameworks */ = {
@@ -45,7 +50,7 @@
 		9B91C7CB2D10CFA10029E789 = {
 			isa = PBXGroup;
 			children = (
-				9B91C7D62D10CFA10029E789 /* openData Camara federal */,
+				9B91C8052D10F7750029E789 /* openData Camara federal */,
 				9B91C7D52D10CFA10029E789 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -56,6 +61,41 @@
 				9B91C7D42D10CFA10029E789 /* openData Camara federal.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		9B91C7FE2D10F7750029E789 /* support */ = {
+			isa = PBXGroup;
+			children = (
+				9B91C7F92D10F7750029E789 /* AppDelegate.swift */,
+				9B91C7FA2D10F7750029E789 /* Assets.xcassets */,
+				9B91C7FC2D10F7750029E789 /* LaunchScreen.storyboard */,
+				9B91C7FD2D10F7750029E789 /* SceneDelegate.swift */,
+			);
+			path = support;
+			sourceTree = "<group>";
+		};
+		9B91C8032D10F7750029E789 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				9B91C8022D10F7750029E789 /* TabBarViewController.swift */,
+				9B91C8002D10F7750029E789 /* homeViewController.swift */,
+				9B91C8012D10F7750029E789 /* searchViewController.swift */,
+				9B91C7FF2D10F7750029E789 /* favoritesViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		9B91C8052D10F7750029E789 /* openData Camara federal */ = {
+			isa = PBXGroup;
+			children = (
+				9B91C7FE2D10F7750029E789 /* support */,
+				9B91C8032D10F7750029E789 /* ViewControllers */,
+				9B91C8042D10F7750029E789 /* Info.plist */,
+				9B91C80F2D10FAD30029E789 /* model.swift */,
+				9B91C8112D10FBC30029E789 /* NetworkManager.swift */,
+				9B91C8132D10FDB20029E789 /* ForecastCollectionViewCell.swift */,
+			);
+			path = "openData Camara federal";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -72,9 +112,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				9B91C7D62D10CFA10029E789 /* openData Camara federal */,
 			);
 			name = "openData Camara federal";
 			packageProductDependencies = (
@@ -122,6 +159,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B91C80C2D10F7750029E789 /* Assets.xcassets in Resources */,
+				9B91C80D2D10F7750029E789 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,10 +171,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B91C8062D10F7750029E789 /* AppDelegate.swift in Sources */,
+				9B91C8072D10F7750029E789 /* SceneDelegate.swift in Sources */,
+				9B91C8082D10F7750029E789 /* favoritesViewController.swift in Sources */,
+				9B91C8092D10F7750029E789 /* homeViewController.swift in Sources */,
+				9B91C8122D10FBC30029E789 /* NetworkManager.swift in Sources */,
+				9B91C8142D10FDB20029E789 /* ForecastCollectionViewCell.swift in Sources */,
+				9B91C80A2D10F7750029E789 /* searchViewController.swift in Sources */,
+				9B91C8102D10FAD30029E789 /* model.swift in Sources */,
+				9B91C80B2D10F7750029E789 /* TabBarViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		9B91C7FC2D10F7750029E789 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9B91C7FB2D10F7750029E789 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		9B91C7E82D10CFA30029E789 /* Debug */ = {
@@ -149,7 +208,6 @@
 				INFOPLIST_FILE = "openData Camara federal/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -176,7 +234,6 @@
 				INFOPLIST_FILE = "openData Camara federal/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
