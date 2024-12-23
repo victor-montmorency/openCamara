@@ -1,24 +1,18 @@
-//
-//  ForecastCollectionViewCell.swift
-//  openData Camara federal
-//
-//  Created by victor mont-morency on 16/12/24.
-//
-
 import UIKit
 
-class ForecastCollectionViewCell: UICollectionViewCell {
+class ForecastTableViewCell: UITableViewCell {
     
     let nameLabel = UILabel()
     let partyLabel = UILabel()
     let photoImageView = UIImageView()
 
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         // Set up the image view
         photoImageView.translatesAutoresizingMaskIntoConstraints = false
-        photoImageView.contentMode = .scaleAspectFill
+        photoImageView.contentMode = .scaleAspectFit
+        photoImageView.clipsToBounds = true
         contentView.addSubview(photoImageView)
         
         // Set up the name label
@@ -29,22 +23,21 @@ class ForecastCollectionViewCell: UICollectionViewCell {
         // Set up the party label
         partyLabel.translatesAutoresizingMaskIntoConstraints = false
         partyLabel.font = UIFont.systemFont(ofSize: 14)
+        partyLabel.textColor = .darkGray
         contentView.addSubview(partyLabel)
         
         // Add constraints to position the views
         NSLayoutConstraint.activate([
-            photoImageView.topAnchor.constraint(equalTo: contentView.topAnchor),
-            photoImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            photoImageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+            photoImageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8),
+            photoImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 8),
+            photoImageView.widthAnchor.constraint(equalToConstant: 60),
+            photoImageView.heightAnchor.constraint(equalToConstant: 90),
             
-            nameLabel.topAnchor.constraint(equalTo: photoImageView.bottomAnchor, constant: 8),
-            nameLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 8),
-            nameLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -8),
+            nameLabel.centerYAnchor.constraint(equalTo: photoImageView.centerYAnchor),
+            nameLabel.leadingAnchor.constraint(equalTo: photoImageView.trailingAnchor, constant: 15),
             
-            partyLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 4),
-            partyLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 8),
-            partyLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -8),
-            partyLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -8)
+            partyLabel.centerYAnchor.constraint(equalTo: photoImageView.centerYAnchor),
+            partyLabel.leadingAnchor.constraint(equalTo: nameLabel.trailingAnchor, constant: 5),
         ])
     }
     

@@ -7,45 +7,40 @@
 
 import UIKit
 
-class homeViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class homeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    var collectionView: UICollectionView!
+    var tableView: UITableView!
     var forecastResponse: ForecastResponse?
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Set up the collection view
-        setupCollectionView()
+        // Set up the table view
+        setupTableView()
         
         // Fetch data from the network
         fetchData()
         
-        collectionView.backgroundColor = UIColor.systemGray
+        tableView.backgroundColor = UIColor.systemGray
     }
     
-    // Set up collection view
-    func setupCollectionView() {
-        let layout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize(width: view.frame.width / 2.1, height: view.frame.height / 2.9)
-        layout.minimumLineSpacing = 20
+    // Set up table view
+    func setupTableView() {
+        tableView = UITableView(frame: view.bounds, style: .plain)
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.register(ForecastTableViewCell.self, forCellReuseIdentifier: "ForecastCell")
+        tableView.rowHeight = 100
         
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(tableView)
         
-        collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: layout)
-        collectionView.dataSource = self
-        collectionView.delegate = self
-        collectionView.register(ForecastCollectionViewCell.self, forCellWithReuseIdentifier: "ForecastCell")
-        
-        collectionView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(collectionView)
-        
-        // Set up constraints for collection view
+        // Set up constraints for table view
         NSLayoutConstraint.activate([
-            collectionView.topAnchor.constraint(equalTo: view.topAnchor),
-            collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+            tableView.topAnchor.constraint(equalTo: view.topAnchor),
+            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
     }
     
@@ -56,7 +51,7 @@ class homeViewController: UIViewController, UICollectionViewDataSource, UICollec
                 switch result {
                 case .success(let forecastResponse):
                     self.forecastResponse = forecastResponse
-                    self.collectionView.reloadData() // Update the UI (reload collection view)
+                    self.tableView.reloadData() // Update the UI (reload table view)
                     
                 case .failure(let error):
                     print("Failed to fetch forecast data: \(error)")
@@ -66,20 +61,27 @@ class homeViewController: UIViewController, UICollectionViewDataSource, UICollec
         }
     }
     
-    // MARK: - UICollectionView DataSource Methods
+    // MARK: - UITableView DataSource Methods
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return forecastResponse?.dados.count ?? 0
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ForecastCell", for: indexPath) as! ForecastCollectionViewCell
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ForecastCell", for: indexPath) as! ForecastTableViewCell
         
         if let dado = forecastResponse?.dados[indexPath.row] {
             cell.configure(with: dado)
         }
         
         return cell
+    }
+    
+    // MARK: - UITableView Delegate Methods
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        // Handle row selection here if needed
     }
     
     // MARK: - Error Handling

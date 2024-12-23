@@ -17,7 +17,7 @@
 		9B91C80D2D10F7750029E789 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B91C7FC2D10F7750029E789 /* LaunchScreen.storyboard */; };
 		9B91C8102D10FAD30029E789 /* model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B91C80F2D10FAD30029E789 /* model.swift */; };
 		9B91C8122D10FBC30029E789 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B91C8112D10FBC30029E789 /* NetworkManager.swift */; };
-		9B91C8142D10FDB20029E789 /* ForecastCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B91C8132D10FDB20029E789 /* ForecastCollectionViewCell.swift */; };
+		9B91C8142D10FDB20029E789 /* ForecastTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B91C8132D10FDB20029E789 /* ForecastTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,7 +33,7 @@
 		9B91C8042D10F7750029E789 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B91C80F2D10FAD30029E789 /* model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = model.swift; sourceTree = "<group>"; };
 		9B91C8112D10FBC30029E789 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
-		9B91C8132D10FDB20029E789 /* ForecastCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastCollectionViewCell.swift; sourceTree = "<group>"; };
+		9B91C8132D10FDB20029E789 /* ForecastTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,7 +93,7 @@
 				9B91C8042D10F7750029E789 /* Info.plist */,
 				9B91C80F2D10FAD30029E789 /* model.swift */,
 				9B91C8112D10FBC30029E789 /* NetworkManager.swift */,
-				9B91C8132D10FDB20029E789 /* ForecastCollectionViewCell.swift */,
+				9B91C8132D10FDB20029E789 /* ForecastTableViewCell.swift */,
 			);
 			path = "openData Camara federal";
 			sourceTree = "<group>";
@@ -176,7 +176,7 @@
 				9B91C8082D10F7750029E789 /* favoritesViewController.swift in Sources */,
 				9B91C8092D10F7750029E789 /* homeViewController.swift in Sources */,
 				9B91C8122D10FBC30029E789 /* NetworkManager.swift in Sources */,
-				9B91C8142D10FDB20029E789 /* ForecastCollectionViewCell.swift in Sources */,
+				9B91C8142D10FDB20029E789 /* ForecastTableViewCell.swift in Sources */,
 				9B91C80A2D10F7750029E789 /* searchViewController.swift in Sources */,
 				9B91C8102D10FAD30029E789 /* model.swift in Sources */,
 				9B91C80B2D10F7750029E789 /* TabBarViewController.swift in Sources */,
