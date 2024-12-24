@@ -17,6 +17,7 @@ class TabBarViewController: UITabBarController {
         if #available(iOS 13.0, *) {
             let tabBarAppearance = UITabBarAppearance()
             tabBarAppearance.configureWithOpaqueBackground()
+            
             tabBarAppearance.backgroundColor = UIColor.secondarySystemBackground
             tabBarAppearance.stackedLayoutAppearance.normal.iconColor = .systemGray2
             tabBarAppearance.stackedLayoutAppearance.normal.titleTextAttributes = [.foregroundColor: UIColor.systemGray2]
@@ -27,6 +28,8 @@ class TabBarViewController: UITabBarController {
             
             // For iOS 15 and later
             if #available(iOS 15.0, *) {
+                tabBar.standardAppearance = tabBarAppearance
+
                 tabBar.scrollEdgeAppearance = tabBarAppearance
             }
         }
@@ -47,7 +50,7 @@ private func setupTabs() {
         let nav = UINavigationController(rootViewController: vc)
         nav.tabBarItem.title = title
         nav.tabBarItem.image = image
-        
+        nav.navigationBar.isTranslucent = false
         return nav
     }
     
